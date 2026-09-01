@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamil Nadu Police - Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00143d, #003b7a, #00152f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 18px;
+            padding: 30px 35px 35px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+            text-align: center;
+        }
+
+        .logo {
+            width: 230px;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            color: #06235c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #222;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .input-group input {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            padding: 0 14px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #064da8;
+            box-shadow: 0 0 0 3px rgba(6, 77, 168, 0.15);
+        }
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            background: #063d91;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 5px;
+        }
+
+        .login-button:hover {
+            background: #052d6b;
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            margin-top: 22px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 25px 22px 30px;
+            }
+
+            .logo {
+                width: 200px;
+            }
+
+            .title {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Tamil Nadu Police Logo -->
+        <img src="TNP logo.jpeg"
+             alt="Tamil Nadu Police Logo"
+             class="logo">
+
+        <div class="title">Tamil Nadu Police</div>
+        <div class="subtitle">Login to continue</div>
+
+        <form onsubmit="login(event)">
+
+            <!-- Username -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter username"
+                    required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-button">
+                Login
+            </button>
+
+        </form>
+
+        <div class="footer">
+            © 2026 Tamil Nadu Police
+        </div>
+
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Demo only — connect this to your backend for real authentication.
+            if (username && password) {
+                alert("Login button clicked!");
+            }
+        }
+    </script>
+
+</body>
+</html>
 
